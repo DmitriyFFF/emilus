@@ -8,6 +8,11 @@ import { IntlProvider } from "react-intl";
 import { ConfigProvider } from 'antd';
 import { APP_PREFIX_PATH, AUTH_PREFIX_PATH } from 'configs/AppConfig'
 
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then(res => res.json())
+  .then(data => console.log(data))
+// console.log(clientData)
+
 export const Views = (props) => {
   const { locale, location } = props;
   const currentAppLocale = AppLocale[locale];
