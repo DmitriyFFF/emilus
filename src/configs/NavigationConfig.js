@@ -944,11 +944,47 @@ const docsNavTree = [{
   ]
 }]
 
+const clientsNavTree = [{
+  key: 'clients-tree',
+  path: `${APP_PREFIX_PATH}/clients`,
+  title: 'Clients',
+  icon: PlusCircleOutlined,
+  breadcrumb: true,
+  submenu: [
+    {
+      key: 'clients',
+      path: `${APP_PREFIX_PATH}/clients`,
+      title: 'Clients',
+      icon: FileTextOutlined,
+      breadcrumb: true,
+      submenu: [
+        {
+          key: 'clients-list',
+          path: `${APP_PREFIX_PATH}/clients/clients-list`,
+          title: 'Client list',
+          icon: '',
+          breadcrumb: true,
+          submenu: []
+        }
+      ]
+    },
+    // {
+    //   key: 'docs-changelog',
+    //   path: `${APP_PREFIX_PATH}/docs/documentation/changelog`,
+    //   title: 'sidenav.docs.changelog',
+    //   icon: ProfileOutlined,
+    //   breadcrumb: false,
+    //   submenu: []
+    // }
+  ]
+}]
+
 const navigationConfig = [
   ...dashBoardNavTree,
   ...appsNavTree,
   ...componentsNavTree,
   ...extraNavTree,
+  ...clientsNavTree,
   ...docsNavTree
 ]
 
